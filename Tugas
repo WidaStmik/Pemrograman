@@ -1,0 +1,94 @@
+# Wida Rizky Apriliana
+# 3220373
+
+
+#program waktu dunia
+from datetime import datetime
+import pytz
+
+print("Program waktu dunia wida")
+print("")
+print("Indonesia")
+tz_jkt = pytz.timezone('Asia/Jakarta') 
+datetime_id = datetime.now(tz_jkt)
+print("waktu jakarta :", datetime_id.strftime("%H:%M:%S"))
+print("")
+print("Jepang")
+tz_tky = pytz.timezone('Asia/Tokyo')
+datetime_jpn = datetime.now(tz_tky)
+print("waktu tokyo:", datetime_jpn.strftime("%H:%M:%S"))
+print("")
+print("Arab saudi")
+tz_rydh = pytz.timezone('Asia/Riyadh')
+datetime_arb = datetime.now(tz_rydh)
+print("waktu riyadh:", datetime_arb.strftime("%H:%M:%S"))
+
+#Tampilkan jam sekarang
+
+from datetime import datetime
+now = datetime.now()
+Waktu_sekarang = now.strftime("%H:%M:%S")
+print("Sekarang jam =", Waktu_sekarang)
+
+
+#Tanggal hari ini
+from datetime import date
+
+tanggal = date.today()
+print("Tanggal hari ini adalah:")
+print(" ",tanggal)
+print("	atau")
+tanggal_1 = tanggal.strftime("%B %d, %Y")
+print("",tanggal_1)
+
+#Gabungan
+from datetime import datetime
+
+waktu= datetime.now() # current date and time
+
+tahun = waktu.strftime("%Y")
+print("tahun:", tahun)
+
+bulan = waktu.strftime("%m")
+print("bulan:", bulan)
+
+hari = waktu.strftime("%d")
+print("hari ke-", hari)
+
+jam = waktu.strftime("%H:%M:%S")
+print("pukul:", jam)
+
+tanggal_waktu = waktu.strftime("%m/%d/%Y, %H:%M:%S")
+print("tanggal dan pukul:",tanggal_waktu)	
+
+
+#jam digital
+import time
+
+while True:
+  localtime = time.localtime()
+  result = time.strftime("%I:%M:%S %p", localtime)
+  print(result)
+  time.sleep(1)
+
+
+#menampilkan kalender
+import calendar
+
+yy = 2021
+mm = 11    
+print(calendar.month(yy, mm))
+
+#menghitung lama suatu program dieksekusi
+import time
+
+start = time.time()
+
+for i in range(100):
+    print(i)
+
+time.sleep(1)
+end = time.time()
+
+print(f"Runtime of the program is {end - start}")
+
